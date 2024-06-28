@@ -7,6 +7,7 @@ namespace Stopwatch
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Iremos fazer um cronometro");
         }
     }
 }
