@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Stopwatch
 {
@@ -6,8 +7,21 @@ namespace Stopwatch
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Iremos fazer um cronometro");
+            Start();
         }
+
+        static void Start()
+        {
+            int time = 10;
+            int currentTime = 0; // Minuto atual
+
+            while (currentTime != time)
+            {
+                Console.Clear();
+                currentTime++;
+                Console.WriteLine(currentTime);
+                Thread.Sleep(1000); //Thread é a execução atual do programa, e nós mandamos ela "dormir" por 1sec
+            }
+       }
     }
 }
